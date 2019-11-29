@@ -52,6 +52,12 @@ class BlurActivity : AppCompatActivity() {
             Glide.with(this).load(imageUri).into(imageView)
         }
 
+        setOnClickListeners()
+
+    }
+
+    private fun setOnClickListeners() {
+        goButton.setOnClickListener { viewModel.applyBlur(blurLevel) }
     }
 
     private fun bindResources() {
